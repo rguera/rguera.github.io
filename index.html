@@ -1,0 +1,1226 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>男女一起拔箩卜挤牛奶_田园生活_自然互动影像社区</title>
+<meta name="description" content="男女一起拔箩卜挤牛奶，记录田园生活中的协作与温度。田野视频品牌，呈现真实的劳动、欢笑与土地故事，构建持续的社区活力。">
+<style>
+  :root{
+    --soil:#4a2f1c;
+    --soil-light:#6b4630;
+    --leaf:#2f6d3f;
+    --leaf-light:#4f9a5f;
+    --cream:#f7f2e7;
+    --wheat:#e8c874;
+    --hay:#d9a743;
+    --sky:#bcd9e0;
+    --ink:#2a2018;
+    --muted:#7d6b58;
+    --radius:18px;
+    --shadow:0 18px 40px -18px rgba(42,32,24,.45);
+    --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font);
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.75;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{width:min(1180px,92vw);margin:0 auto;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--leaf);font-weight:600;
+  }
+  .eyebrow::before{
+    content:"";width:32px;height:2px;background:var(--leaf-light);display:inline-block;
+  }
+  h1,h2,h3,h4{line-height:1.25;font-weight:800;}
+  .section{padding:96px 0;position:relative;}
+  .section-head{max-width:720px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(1.8rem,3.4vw,2.7rem);margin:16px 0 18px;letter-spacing:.01em;}
+  .section-head p{color:var(--muted);font-size:1.02rem;}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;inset:0 0 auto 0;z-index:60;
+    backdrop-filter:blur(14px);
+    background:rgba(247,242,231,.82);
+    border-bottom:1px solid rgba(74,47,28,.08);
+    transition:background .3s;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.12rem;letter-spacing:.04em;}
+  .brand-mark{
+    width:42px;height:42px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%,var(--leaf-light),var(--leaf));
+    display:grid;place-items:center;color:#fff;box-shadow:0 8px 18px -8px rgba(47,109,63,.8);
+  }
+  .nav-links{display:flex;gap:34px;font-size:.94rem;font-weight:600;color:var(--soil-light);}
+  .nav-links a{position:relative;padding:6px 0;transition:color .25s;}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+    background:var(--leaf);transition:width .3s;
+  }
+  .nav-links a:hover{color:var(--leaf);}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    padding:11px 24px;border-radius:999px;background:var(--soil);color:var(--cream);
+    font-size:.9rem;font-weight:700;transition:transform .25s,background .25s;
+  }
+  .nav-cta:hover{background:var(--leaf);transform:translateY(-2px);}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .menu-btn span{display:block;width:24px;height:2px;background:var(--soil);margin:5px 0;transition:.3s;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;padding:170px 0 90px;
+    background:
+      radial-gradient(1200px 500px at 80% -10%,rgba(232,200,116,.5),transparent 60%),
+      radial-gradient(900px 600px at 0% 100%,rgba(79,154,95,.28),transparent 65%),
+      linear-gradient(180deg,#f9f4ea 0%,#f2ecdd 100%);
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;left:0;right:0;bottom:-2px;height:120px;
+    background:var(--cream);
+    clip-path:polygon(0 60%,12% 40%,28% 62%,45% 38%,62% 58%,78% 34%,92% 56%,100% 42%,100% 100%,0 100%);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
+  .hero h1{
+    font-size:clamp(2.4rem,5.4vw,4.2rem);
+    letter-spacing:.02em;margin:22px 0 26px;color:var(--soil);
+  }
+  .hero h1 em{font-style:normal;color:var(--leaf);position:relative;}
+  .hero h1 em::after{
+    content:"";position:absolute;left:0;right:0;bottom:6px;height:12px;
+    background:rgba(232,200,116,.55);z-index:-1;border-radius:6px;
+  }
+  .hero p.lead{font-size:1.12rem;color:var(--soil-light);max-width:520px;margin-bottom:36px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 32px;border-radius:999px;background:var(--leaf);color:#fff;
+    font-weight:700;box-shadow:0 16px 30px -14px rgba(47,109,63,.9);
+    transition:transform .25s,box-shadow .25s;
+  }
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 36px -16px rgba(47,109,63,.9);}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 30px;border-radius:999px;border:1.5px solid rgba(74,47,28,.25);
+    font-weight:700;color:var(--soil);transition:.25s;
+  }
+  .btn-ghost:hover{border-color:var(--leaf);color:var(--leaf);background:rgba(79,154,95,.07);}
+
+  .hero-visual{position:relative;}
+  .hero-card{
+    background:#fff;border-radius:28px;padding:18px;box-shadow:var(--shadow);
+    transform:rotate(1.5deg);transition:transform .4s;
+  }
+  .hero-card:hover{transform:rotate(0deg) translateY(-6px);}
+  .hero-card .frame{border-radius:18px;overflow:hidden;position:relative;background:#dfe9d8;}
+  .hero-card .frame svg{width:100%;height:auto;}
+  .badge-float{
+    position:absolute;background:#fff;border-radius:16px;padding:12px 18px;
+    box-shadow:0 14px 30px -14px rgba(42,32,24,.5);font-weight:700;font-size:.86rem;
+    display:flex;align-items:center;gap:10px;
+  }
+  .badge-float.b1{top:-22px;left:-18px;color:var(--leaf);}
+  .badge-float.b2{bottom:-24px;right:-10px;color:var(--hay);}
+  .pulse-dot{width:9px;height:9px;border-radius:50%;background:var(--leaf-light);box-shadow:0 0 0 0 rgba(79,154,95,.6);animation:pulse 2s infinite;}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(79,154,95,.55);}
+    70%{box-shadow:0 0 0 12px rgba(79,154,95,0);}
+    100%{box-shadow:0 0 0 0 rgba(79,154,95,0);}
+  }
+  .hero-stats{display:flex;gap:44px;margin-top:56px;flex-wrap:wrap;}
+  .hero-stats .stat b{display:block;font-size:1.9rem;color:var(--soil);letter-spacing:.02em;}
+  .hero-stats .stat span{font-size:.85rem;color:var(--muted);letter-spacing:.1em;}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    background:var(--soil);color:var(--cream);padding:16px 0;overflow:hidden;
+    border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);
+  }
+  .marquee-track{display:flex;gap:56px;white-space:nowrap;animation:scroll 26s linear infinite;width:max-content;}
+  .marquee-track span{font-size:.92rem;letter-spacing:.18em;color:rgba(247,242,231,.82);display:flex;align-items:center;gap:56px;}
+  .marquee-track span::after{content:"✿";color:var(--wheat);}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  .about-copy h2{font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--soil);margin:16px 0 22px;}
+  .about-copy p{color:var(--soil-light);margin-bottom:18px;}
+  .about-list{display:grid;gap:18px;margin-top:30px;}
+  .about-list li{display:flex;gap:16px;align-items:flex-start;}
+  .about-list .ico{
+    flex:0 0 44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    background:rgba(79,154,95,.12);color:var(--leaf);
+  }
+  .about-list h4{font-size:1rem;margin-bottom:4px;color:var(--soil);}
+  .about-list p{font-size:.9rem;color:var(--muted);margin:0;}
+  .about-visual{position:relative;}
+  .about-visual .main{
+    border-radius:26px;overflow:hidden;box-shadow:var(--shadow);background:#e9f0e2;
+  }
+  .about-visual .overlap{
+    position:absolute;right:-24px;bottom:-28px;width:44%;border-radius:20px;overflow:hidden;
+    box-shadow:0 20px 40px -16px rgba(42,32,24,.5);border:6px solid var(--cream);
+  }
+
+  /* ---------- EPISODES ---------- */
+  .episodes{background:linear-gradient(180deg,#f2ecdd 0%,#f7f2e7 100%);}
+  .filter-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px;}
+  .filter-row button{
+    padding:10px 22px;border-radius:999px;border:1.5px solid rgba(74,47,28,.18);
+    background:transparent;font-family:inherit;font-size:.9rem;font-weight:600;
+    color:var(--soil-light);cursor:pointer;transition:.25s;
+  }
+  .filter-row button:hover{border-color:var(--leaf);color:var(--leaf);}
+  .filter-row button.active{background:var(--soil);border-color:var(--soil);color:var(--cream);}
+  .ep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .ep-card{
+    background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 30px -20px rgba(42,32,24,.5);
+    transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column;
+  }
+  .ep-card:hover{transform:translateY(-8px);box-shadow:0 26px 48px -24px rgba(42,32,24,.5);}
+  .ep-thumb{position:relative;background:#dfe9d8;aspect-ratio:16/10;overflow:hidden;}
+  .ep-thumb svg{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+  .ep-card:hover .ep-thumb svg{transform:scale(1.05);}
+  .ep-tag{
+    position:absolute;top:14px;left:14px;background:rgba(247,242,231,.94);color:var(--soil);
+    font-size:.74rem;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.06em;
+  }
+  .ep-dur{
+    position:absolute;bottom:14px;right:14px;background:rgba(42,32,24,.78);color:#fff;
+    font-size:.74rem;padding:4px 10px;border-radius:6px;font-weight:600;
+  }
+  .ep-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1;}
+  .ep-body h3{font-size:1.14rem;color:var(--soil);margin-bottom:10px;}
+  .ep-body p{font-size:.9rem;color:var(--muted);flex:1;}
+  .ep-meta{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:.8rem;color:var(--muted);}
+  .ep-meta .play{color:var(--leaf);font-weight:700;display:flex;align-items:center;gap:6px;}
+
+  /* ---------- PROCESS ---------- */
+  .process{background:var(--soil);color:var(--cream);position:relative;overflow:hidden;}
+  .process::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(700px 400px at 85% 0%,rgba(232,200,116,.16),transparent 60%),
+               radial-gradient(600px 500px at 5% 100%,rgba(79,154,95,.22),transparent 65%);
+  }
+  .process .wrap{position:relative;z-index:2;}
+  .process .eyebrow{color:var(--wheat);}
+  .process .eyebrow::before{background:var(--wheat);}
+  .process h2{color:var(--cream);}
+  .process .section-head p{color:rgba(247,242,231,.7);}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .step{
+    background:rgba(247,242,231,.06);border:1px solid rgba(247,242,231,.12);
+    border-radius:var(--radius);padding:30px 24px;transition:.3s;
+  }
+  .step:hover{background:rgba(247,242,231,.1);transform:translateY(-6px);}
+  .step .num{
+    font-size:2.4rem;font-weight:800;color:var(--wheat);opacity:.8;line-height:1;
+    font-family:Georgia,serif;
+  }
+  .step h4{margin:18px 0 10px;font-size:1.06rem;color:var(--cream);}
+  .step p{font-size:.88rem;color:rgba(247,242,231,.65);}
+
+  /* ---------- COMMUNITY ---------- */
+  .community-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:stretch;}
+  .voice-list{display:grid;gap:20px;}
+  .voice{
+    background:#fff;border-radius:var(--radius);padding:26px 28px;
+    box-shadow:0 10px 28px -22px rgba(42,32,24,.5);display:flex;gap:18px;
+    transition:transform .3s;
+  }
+  .voice:hover{transform:translateX(6px);}
+  .voice .avatar{
+    flex:0 0 52px;height:52px;border-radius:50%;display:grid;place-items:center;
+    font-weight:800;color:#fff;font-size:1.05rem;
+  }
+  .av1{background:linear-gradient(135deg,#4f9a5f,#2f6d3f);}
+  .av2{background:linear-gradient(135deg,#d9a743,#b57f20);}
+  .av3{background:linear-gradient(135deg,#6b8fb5,#3f6488);}
+  .av4{background:linear-gradient(135deg,#b5735a,#8c4c36);}
+  .voice .v-body h4{font-size:.98rem;color:var(--soil);margin-bottom:4px;}
+  .voice .v-body .role{font-size:.76rem;color:var(--muted);letter-spacing:.08em;margin-bottom:10px;}
+  .voice .v-body p{font-size:.92rem;color:var(--soil-light);}
+  .community-side{
+    background:linear-gradient(160deg,#eef4e8,#e3eedb);
+    border-radius:26px;padding:40px 34px;display:flex;flex-direction:column;justify-content:center;
+    position:relative;overflow:hidden;
+  }
+  .community-side::before{
+    content:"";position:absolute;width:260px;height:260px;border-radius:50%;
+    background:rgba(79,154,95,.14);top:-80px;right:-70px;
+  }
+  .community-side h3{font-size:1.5rem;color:var(--soil);margin-bottom:14px;position:relative;}
+  .community-side p{color:var(--soil-light);font-size:.95rem;margin-bottom:26px;position:relative;}
+  .community-nums{display:grid;grid-template-columns:1fr 1fr;gap:22px;position:relative;}
+  .community-nums b{display:block;font-size:1.7rem;color:var(--leaf);}
+  .community-nums span{font-size:.8rem;color:var(--muted);letter-spacing:.08em;}
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:18px;
+  }
+  .g-item{border-radius:16px;overflow:hidden;position:relative;background:#dfe9d8;}
+  .g-item svg{width:100%;height:100%;transition:transform .5s;}
+  .g-item:hover svg{transform:scale(1.07);}
+  .g-item.tall{grid-row:span 2;}
+  .g-item.wide{grid-column:span 2;}
+  .g-cap{
+    position:absolute;left:0;right:0;bottom:0;padding:22px 18px 14px;
+    background:linear-gradient(transparent,rgba(42,32,24,.72));color:#fff;font-size:.85rem;font-weight:600;
+  }
+
+  /* ---------- JOIN ---------- */
+  .join{
+    background:linear-gradient(130deg,#2f6d3f,#245732);
+    border-radius:32px;padding:70px 60px;color:var(--cream);position:relative;overflow:hidden;
+    display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;
+  }
+  .join::before{
+    content:"";position:absolute;width:420px;height:420px;border-radius:50%;
+    border:2px dashed rgba(232,200,116,.28);top:-160px;right:-120px;
+  }
+  .join::after{
+    content:"";position:absolute;width:220px;height:220px;border-radius:50%;
+    background:rgba(232,200,116,.1);bottom:-90px;left:20%;
+  }
+  .join h2{font-size:clamp(1.8rem,3.2vw,2.5rem);margin:14px 0 18px;color:#fff;position:relative;}
+  .join p{color:rgba(247,242,231,.78);margin-bottom:30px;position:relative;}
+  .join-form{display:flex;gap:12px;flex-wrap:wrap;position:relative;}
+  .join-form input{
+    flex:1;min-width:200px;padding:15px 20px;border-radius:999px;border:1px solid rgba(247,242,231,.3);
+    background:rgba(247,242,231,.08);color:#fff;font-family:inherit;font-size:.94rem;outline:none;
+    transition:.25s;
+  }
+  .join-form input::placeholder{color:rgba(247,242,231,.5);}
+  .join-form input:focus{border-color:var(--wheat);background:rgba(247,242,231,.14);}
+  .join-form button{
+    padding:15px 30px;border-radius:999px;border:0;background:var(--wheat);color:var(--soil);
+    font-family:inherit;font-weight:800;font-size:.94rem;cursor:pointer;transition:.25s;
+  }
+  .join-form button:hover{background:#f0d58f;transform:translateY(-2px);}
+  .join-side{position:relative;display:grid;gap:14px;}
+  .join-chip{
+    background:rgba(247,242,231,.1);border:1px solid rgba(247,242,231,.18);
+    padding:16px 20px;border-radius:14px;font-size:.9rem;color:rgba(247,242,231,.9);
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  .join-chip b{color:var(--wheat);font-size:1.05rem;}
+  .form-msg{font-size:.85rem;color:var(--wheat);min-height:1.4em;margin-top:10px;position:relative;}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:860px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid rgba(74,47,28,.12);}
+  .faq-q{
+    width:100%;background:none;border:0;font-family:inherit;text-align:left;
+    padding:26px 0;font-size:1.05rem;font-weight:700;color:var(--soil);cursor:pointer;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;
+  }
+  .faq-q .plus{
+    flex:0 0 30px;height:30px;border-radius:50%;background:rgba(79,154,95,.12);
+    display:grid;place-items:center;color:var(--leaf);font-size:1.1rem;transition:.3s;
+  }
+  .faq-item.open .plus{transform:rotate(45deg);background:var(--leaf);color:#fff;}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+  .faq-a p{padding:0 0 26px;color:var(--muted);font-size:.95rem;max-width:760px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#241a12;color:rgba(247,242,231,.7);padding:70px 0 30px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:44px;padding-bottom:50px;}
+  .foot-brand .brand{color:var(--cream);margin-bottom:18px;}
+  .foot-brand p{font-size:.9rem;max-width:300px;margin-bottom:22px;}
+  .foot-social{display:flex;gap:12px;}
+  .foot-social a{
+    width:38px;height:38px;border-radius:50%;border:1px solid rgba(247,242,231,.2);
+    display:grid;place-items:center;transition:.25s;
+  }
+  .foot-social a:hover{background:var(--leaf);border-color:var(--leaf);color:#fff;}
+  .foot-col h4{color:var(--cream);font-size:.95rem;margin-bottom:18px;letter-spacing:.06em;}
+  .foot-col li{margin-bottom:12px;font-size:.88rem;}
+  .foot-col a{transition:color .25s;}
+  .foot-col a:hover{color:var(--wheat);}
+  .foot-bottom{
+    border-top:1px solid rgba(247,242,231,.1);padding-top:26px;
+    display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.82rem;
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:980px){
+    .hero-grid,.about-grid,.community-grid,.join{grid-template-columns:1fr;}
+    .ep-grid{grid-template-columns:repeat(2,1fr);}
+    .steps{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .nav-links{display:none;}
+    .menu-btn{display:block;}
+    .nav-cta{display:none;}
+    .about-visual .overlap{position:static;width:100%;margin-top:18px;border-width:0;}
+    .join{padding:48px 32px;}
+  }
+  @media(max-width:640px){
+    .section{padding:68px 0;}
+    .ep-grid,.steps,.gallery-grid{grid-template-columns:1fr;}
+    .g-item.wide,.g-item.tall{grid-column:auto;grid-row:auto;}
+    .hero{padding:140px 0 70px;}
+    .hero-stats{gap:28px;}
+    .foot-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-auto-rows:200px;}
+  }
+  .mobile-menu{
+    position:fixed;inset:74px 0 auto 0;background:var(--cream);z-index:55;
+    padding:30px 6vw 40px;display:none;flex-direction:column;gap:6px;
+    box-shadow:0 20px 40px -24px rgba(42,32,24,.5);
+    border-bottom:1px solid rgba(74,47,28,.1);
+  }
+  .mobile-menu.show{display:flex;}
+  .mobile-menu a{padding:14px 0;font-weight:700;color:var(--soil);border-bottom:1px solid rgba(74,47,28,.07);}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21c-4 0-7-3-7-7 0-3 2-5 4-6l3-4 3 4c2 1 4 3 4 6 0 4-3 7-7 7z"/>
+          <path d="M12 21v-7"/>
+        </svg>
+      </span>
+      <span>田野同行</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">关于我们</a>
+      <a href="#episodes">影像专栏</a>
+      <a href="#process">拍摄手记</a>
+      <a href="#community">社区声音</a>
+      <a href="#gallery">田园图集</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a href="#join" class="nav-cta">加入社区</a>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">关于我们</a>
+  <a href="#episodes">影像专栏</a>
+  <a href="#process">拍摄手记</a>
+  <a href="#community">社区声音</a>
+  <a href="#gallery">田园图集</a>
+  <a href="#join">加入社区</a>
+  <a href="#faq">常见问题</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">田野影像 · 生活记录</span>
+      <h1>男女一起拔箩卜挤牛奶</h1>
+      <p class="lead">
+        我们把镜头放在田垄和牛棚之间，记录男女一起拔箩卜、挤牛奶时那些不经意的默契。
+        泥土沾在指缝里，笑声落在风里，这是一部关于协作、劳作与土地温度的长期影像档案。
+      </p>
+      <div class="hero-actions">
+        <a href="#episodes" class="btn-primary">
+          观看最新影像
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </a>
+        <a href="#community" class="btn-ghost">进入社区</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>1,286</b><span>影像档案</span></div>
+        <div class="stat"><b>42</b><span>合作农场</span></div>
+        <div class="stat"><b>3.6万</b><span>社区成员</span></div>
+        <div class="stat"><b>9年</b><span>持续记录</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-card">
+        <div class="frame">
+          <svg viewBox="0 0 560 420" role="img" aria-label="男女一起在田间拔箩卜与挤牛奶的插画">
+            <defs>
+              <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#cfe6ee"/><stop offset="1" stop-color="#eaf3e4"/>
+              </linearGradient>
+              <linearGradient id="fieldG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8fc47f"/><stop offset="1" stop-color="#5b9a52"/>
+              </linearGradient>
+              <linearGradient id="soilG" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#8a5f3c"/><stop offset="1" stop-color="#5f3f26"/>
+              </linearGradient>
+            </defs>
+            <rect width="560" height="420" fill="url(#skyG)"/>
+            <circle cx="455" cy="85" r="44" fill="#f5d98a" opacity=".9"/>
+            <ellipse cx="120" cy="80" rx="52" ry="22" fill="#fff" opacity=".7"/>
+            <ellipse cx="180" cy="66" rx="38" ry="16" fill="#fff" opacity=".6"/>
+            <path d="M0 250 Q140 200 280 236 T560 220 V420 H0 Z" fill="url(#fieldG)"/>
+            <path d="M0 300 Q160 262 320 296 T560 280 V420 H0 Z" fill="#4d8a46" opacity=".55"/>
+            <!-- 田垄 -->
+            <g stroke="#3f7a3a" stroke-width="3" opacity=".5">
+              <path d="M30 420 Q90 320 60 270"/>
+              <path d="M140 420 Q190 330 160 276"/>
+              <path d="M250 420 Q300 336 272 282"/>
+            </g>
+            <!-- 萝卜 -->
+            <g>
+              <ellipse cx="92" cy="330" rx="20" ry="12" fill="#6fb35e"/>
+              <path d="M78 336 Q92 372 92 386 Q104 366 106 338 Z" fill="#e8f1e0" stroke="#d3e4c8" stroke-width="2"/>
+              <path d="M86 322 l-14 -22 M92 320 l0 -26 M98 322 l14 -22" stroke="#4f9a5f" stroke-width="5" stroke-linecap="round" fill="none"/>
+            </g>
+            <g>
+              <ellipse cx="200" cy="366" rx="18" ry="11" fill="#6fb35e"/>
+              <path d="M188 372 Q200 402 200 414 Q210 398 214 372 Z" fill="#eef4e6" stroke="#d3e4c8" stroke-width="2"/>
+              <path d="M194 358 l-12 -20 M200 356 l2 -24 M206 358 l12 -20" stroke="#4a8c46" stroke-width="5" stroke-linecap="round" fill="none"/>
+            </g>
+            <!-- 人：女 -->
+            <g>
+              <circle cx="330" cy="238" r="20" fill="#f0c6a0"/>
+              <path d="M310 238 q0 -26 20 -26 q20 0 20 26 q-6 -12 -20 -12 q-14 0 -20 12z" fill="#3d2a1d"/>
+              <path d="M330 258 q-26 6 -30 40 l-4 42 h68 l-4 -42 q-4 -34 -30 -40z" fill="#d8784f"/>
+              <path d="M300 280 q-26 14 -34 40" stroke="#f0c6a0" stroke-width="11" stroke-linecap="round" fill="none"/>
+              <path d="M360 280 q26 10 30 34" stroke="#f0c6a0" stroke-width="11" stroke-linecap="round" fill="none"/>
+              <path d="M304 340 l-4 44 M356 340 l4 44" stroke="#4a3a30" stroke-width="12" stroke-linecap="round"/>
+            </g>
+            <!-- 人：男 -->
+            <g>
+              <circle cx="404" cy="252" r="19" fill="#e6b78e"/>
+              <path d="M386 248 q0 -22 18 -22 q18 0 18 22 q-6 -10 -18 -10 q-12 0 -18 10z" fill="#2f2018"/>
+              <path d="M404 272 q-24 6 -28 38 l-4 38 h62 l-4 -38 q-4 -32 -26 -38z" fill="#5b7fa6"/>
+              <path d="M378 292 q-22 12 -30 32" stroke="#e6b78e" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <path d="M430 292 q22 10 26 28" stroke="#e6b78e" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <path d="M382 350 l-4 38 M422 350 l4 38" stroke="#3b4a5c" stroke-width="11" stroke-linecap="round"/>
+            </g>
+            <!-- 牛奶桶 -->
+            <g>
+              <rect x="452" y="318" width="52" height="58" rx="8" fill="#c9d4dc" stroke="#9aa9b4" stroke-width="3"/>
+              <rect x="456" y="308" width="44" height="16" rx="6" fill="#e3ebf0" stroke="#9aa9b4" stroke-width="3"/>
+              <ellipse cx="478" cy="356" rx="16" ry="6" fill="#fff" opacity=".9"/>
+              <path d="M478 306 q0 -18 16 -24" stroke="#9aa9b4" stroke-width="4" fill="none" stroke-linecap="round"/>
+            </g>
+            <!-- 牛 -->
+            <g transform="translate(60,236)">
+              <ellipse cx="80" cy="70" rx="66" ry="40" fill="#f4efe6" stroke="#c9baa6" stroke-width="3"/>
+              <ellipse cx="46" cy="52" rx="16" ry="11" fill="#c9baa6" opacity=".8"/>
+              <ellipse cx="100" cy="60" rx="20" ry="13" fill="#c9baa6" opacity=".8"/>
+              <path d="M16 70 q-20 -8 -22 -28 q16 4 22 14" fill="#f4efe6" stroke="#c9baa6" stroke-width="3"/>
+              <circle cx="0" cy="34" r="22" fill="#f7f3ec" stroke="#c9baa6" stroke-width="3"/>
+              <path d="M-14 18 q-8 -14 2 -20 q6 8 6 18" fill="#e8dcc8" stroke="#c9baa6" stroke-width="2"/>
+              <path d="M10 16 q8 -14 -1 -20 q-6 8 -6 18" fill="#e8dcc8" stroke="#c9baa6" stroke-width="2"/>
+              <ellipse cx="-8" cy="42" rx="6" ry="5" fill="#3b2f26"/>
+              <ellipse cx="10" cy="42" rx="6" ry="5" fill="#3b2f26"/>
+              <ellipse cx="-18" cy="52" rx="12" ry="8" fill="#e9a3a3" opacity=".7"/>
+              <path d="M40 104 l0 20 M70 106 l0 20 M96 104 l0 20 M120 100 l0 20" stroke="#c9baa6" stroke-width="8" stroke-linecap="round"/>
+            </g>
+            <!-- 鸟 -->
+            <path d="M360 100 q8 -8 16 0 M382 92 q8 -8 16 0" stroke="#6b7f8a" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="badge-float b1"><span class="pulse-dot"></span>正在记录 · 田间清晨</div>
+      <div class="badge-float b2">✿ 今日更新 2 集</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>拔箩卜的默契 挤牛奶的耐心 田野里的笑声 泥土与晨露 两人一牛一垄田 真实的协作 可持续的生活 慢下来的镜头</span>
+    <span>拔箩卜的默契 挤牛奶的耐心 田野里的笑声 泥土与晨露 两人一牛一垄田 真实的协作 可持续的生活 慢下来的镜头</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow">关于我们</span>
+      <h2>把镜头交给土地，把故事交给同行的人</h2>
+      <p>
+        田野同行是一支长期驻扎在乡村的影像团队。我们不做摆拍，也不追求戏剧化的冲突，
+        而是把摄影机安放在田埂边、牛棚里，等待男女一起拔箩卜、挤牛奶的真实瞬间自然发生。
+      </p>
+      <p>
+        九年里，我们与四十多个家庭农场、合作社和乡村社区保持合作，用影像串起劳动的节奏与生活的温度。
+        每一集都从泥土开始，也从泥土结束。
+      </p>
+      <ul class="about-list">
+        <li>
+          <span class="ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg>
+          </span>
+          <div><h4>真实优先</h4><p>不设计台词，不引导动作，只记录劳动本身的节奏与呼吸。</p></div>
+        </li>
+        <li>
+          <span class="ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </span>
+          <div><h4>长期陪伴</h4><p>同一块土地、同一组人物，按季节回访，形成可延续的档案。</p></div>
+        </li>
+        <li>
+          <span class="ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 20c4-8 12-8 16 0"/><circle cx="12" cy="8" r="4"/></svg>
+          </span>
+          <div><h4>社区共创</h4><p>开放选题与素材投稿，让观众成为影像的一部分，而非旁观者。</p></div>
+        </li>
+      </ul>
+    </div>
+    <div class="about-visual reveal">
+      <div class="main">
+        <svg viewBox="0 0 520 380" role="img" aria-label="田园合作社场景插画">
+          <defs>
+            <linearGradient id="aSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7e9ef"/><stop offset="1" stop-color="#eef5e6"/></linearGradient>
+            <linearGradient id="aField" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cb96e"/><stop offset="1" stop-color="#4e8a47"/></linearGradient>
+          </defs>
+          <rect width="520" height="380" fill="url(#aSky)"/>
+          <circle cx="90" cy="70" r="34" fill="#f6da90" opacity=".9"/>
+          <path d="M0 210 Q130 168 260 200 T520 186 V380 H0 Z" fill="url(#aField)"/>
+          <g opacity=".5" stroke="#3f7a3a" stroke-width="2">
+            <path d="M40 380 Q80 300 64 250"/><path d="M150 380 Q188 306 172 260"/><path d="M300 380 Q330 310 314 264"/>
+          </g>
+          <!-- 农舍 -->
+          <g>
+            <rect x="330" y="180" width="110" height="80" fill="#f2e6d2" stroke="#cbb99c" stroke-width="3"/>
+            <path d="M318 182 L385 138 L452 182 Z" fill="#c96b52" stroke="#a8543f" stroke-width="3"/>
+            <rect x="360" y="212" width="24" height="48" fill="#8d5b3d"/>
+            <rect x="404" y="206" width="22" height="22" fill="#a8cfe0" stroke="#cbb99c" stroke-width="2"/>
+          </g>
+          <!-- 堆肥/草垛 -->
+          <g>
+            <ellipse cx="120" cy="258" rx="46" ry="22" fill="#d9b35e"/>
+            <path d="M76 258 q44 -34 88 0" fill="#e3c073" stroke="#c39b46" stroke-width="2"/>
+          </g>
+          <!-- 人物 -->
+          <g>
+            <circle cx="230" cy="238" r="15" fill="#f0c6a0"/>
+            <path d="M215 238 q0 -20 15 -20 q15 0 15 20 q-5 -9 -15 -9 q-10 0 -15 9z" fill="#3b2a1e"/>
+            <path d="M230 254 q-20 5 -23 30 l-3 30 h52 l-3 -30 q-3 -25 -23 -30z" fill="#4f9a5f"/>
+            <path d="M212 274 q-18 8 -24 24" stroke="#f0c6a0" stroke-width="9" stroke-linecap="round" fill="none"/>
+          </g>
+          <g>
+            <circle cx="278" cy="244" r="14" fill="#e8b98e"/>
+            <path d="M264 242 q0 -18 14 -18 q14 0 14 18 q-5 -8 -14 -8 q-9 0 -14 8z" fill="#2c1e15"/>
+            <path d="M278 258 q-18 5 -21 28 l-2 28 h46 l-2 -28 q-3 -23 -21 -28z" fill="#d8a24d"/>
+          </g>
+          <!-- 近处胡萝卜 -->
+          <g transform="translate(60,300)">
+            <path d="M20 0 l-16 -34 M24 0 l0 -40 M28 0 l16 -34" stroke="#3f8a3f" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M14 4 Q24 34 24 50 Q34 30 36 4 Z" fill="#ef9a4a" stroke="#d47f34" stroke-width="2"/>
+          </g>
+          <g transform="translate(120,330)">
+            <path d="M16 0 l-12 -26 M20 0 l0 -30 M24 0 l12 -26" stroke="#3f8a3f" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <path d="M10 4 Q18 28 18 40 Q27 24 29 4 Z" fill="#f0a95a" stroke="#d47f34" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+      <div class="overlap">
+        <svg viewBox="0 0 260 200" role="img" aria-label="牛奶桶插画">
+          <rect width="260" height="200" fill="#e3eedb"/>
+          <circle cx="210" cy="40" r="26" fill="#f6da90" opacity=".85"/>
+          <rect x="70" y="76" width="90" height="94" rx="10" fill="#ccd7df" stroke="#9aa9b4" stroke-width="3"/>
+          <rect x="76" y="60" width="78" height="22" rx="8" fill="#e6edf2" stroke="#9aa9b4" stroke-width="3"/>
+          <ellipse cx="115" cy="130" rx="26" ry="10" fill="#fff" opacity=".9"/>
+          <path d="M115 58 q0 -22 22 -28" stroke="#9aa9b4" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M40 176 q40 -18 90 0" stroke="#4e8a47" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EPISODES -->
+<section class="section episodes" id="episodes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">影像专栏</span>
+      <h2>每一集，都是一次并肩劳作</h2>
+      <p>从春播到秋收，从拔箩卜的清晨到挤牛奶的黄昏，我们按季节更新影像专栏，记录男女搭档在土地上的真实协作。</p>
+    </div>
+    <div class="filter-row reveal" id="filterRow">
+      <button class="active" data-filter="all">全部</button>
+      <button data-filter="field">田间劳作</button>
+      <button data-filter="dairy">牛棚日常</button>
+      <button data-filter="people">人物故事</button>
+      <button data-filter="season">四季风物</button>
+    </div>
+    <div class="ep-grid" id="epGrid">
+      <article class="ep-card reveal" data-cat="field">
+        <div class="ep-thumb">
+          <svg viewBox="0 0 400 250" role="img" aria-label="清晨拔箩卜">
+            <rect width="400" height="250" fill="#d9e9d2"/>
+            <path d="M0 150 Q100 118 200 144 T400 132 V250 H0 Z" fill="#8fc47f"/>
+            <path d="M0 190 Q120 160 240 186 T400 176 V250 H0 Z" fill="#5b9a52"/>
+            <circle cx="330" cy="52" r="30" fill="#f5d98a"/>
+            <g>
+              <circle cx="160" cy="120" r="14" fill="#f0c6a0"/>
+              <path d="M160 134 q-18 5 -21 28 l-2 26 h44 l-2 -26 q-3 -23 -19 -28z" fill="#d8784f"/>
+              <circle cx="212" cy="126" r="13" fill="#e6b78e"/>
+              <path d="M212 139 q-17 4 -19 26 l-2 24 h40 l-2 -24 q-2 -22 -17 -26z" fill="#5b7fa6"/>
+              <path d="M186 196 l-2 26 M214 196 l2 26" stroke="#4a3a30" stroke-width="9" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(90,178)">
+              <path d="M10 0 l-10 -18 M14 0 l0 -22 M18 0 l10 -18" stroke="#3f8a3f" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M6 3 Q14 22 14 32 Q21 18 23 3 Z" fill="#ef9a4a"/>
+            </g>
+          </svg>
+          <span class="ep-tag">田间劳作</span>
+          <span class="ep-dur">08:42</span>
+        </div>
+        <div class="ep-body">
+          <h3>晨露未干，两个人一垄田</h3>
+          <p>天刚亮，男女人搭档一左一右蹲在田垄上拔箩卜，泥土翻起的声音比闹钟更清醒。</p>
+          <div class="ep-meta"><span>第 128 集 · 春分</span><span class="play">▶ 观看</span></div>
+        </div>
+      </article>
+
+      <article class="ep-card reveal" data-cat="dairy">
+        <div class="ep-thumb">
+          <svg viewBox="0 0 400 250" role="img" aria-label="牛棚挤牛奶">
+            <rect width="400" height="250" fill="#efe6d5"/>
+            <rect y="180" width="400" height="70" fill="#c9b48d"/>
+            <path d="M0 40 H400 V180 H0 Z" fill="#e8ddc6"/>
+            <path d="M0 120 H400" stroke="#cbb99c" stroke-width="4"/>
+            <g transform="translate(110,90)">
+              <ellipse cx="80" cy="62" rx="56" ry="34" fill="#f7f3ec" stroke="#c9baa6" stroke-width="3"/>
+              <ellipse cx="46" cy="48" rx="14" ry="9" fill="#c9baa6" opacity=".8"/>
+              <circle cx="12" cy="34" r="20" fill="#f9f5ee" stroke="#c9baa6" stroke-width="3"/>
+              <ellipse cx="4" cy="40" rx="5" ry="4" fill="#3b2f26"/>
+              <ellipse cx="18" cy="40" rx="5" ry="4" fill="#3b2f26"/>
+              <path d="M44 92 l0 18 M72 92 l0 18 M98 90 l0 18" stroke="#c9baa6" stroke-width="7" stroke-linecap="round"/>
+            </g>
+            <g>
+              <circle cx="300" cy="112" r="14" fill="#e8b98e"/>
+              <path d="M288 110 q0 -18 12 -18 q12 0 12 18 q-4 -8 -12 -8 q-8 0 -12 8z" fill="#2c1e15"/>
+              <path d="M300 126 q-17 4 -19 26 l-2 30 h40 l-2 -30 q-2 -22 -17 -26z" fill="#4f9a5f"/>
+              <path d="M284 144 q-14 8 -18 24" stroke="#e8b98e" stroke-width="8" stroke-linecap="round" fill="none"/>
+            </g>
+            <rect x="322" y="176" width="34" height="38" rx="6" fill="#ccd7df" stroke="#9aa9b4" stroke-width="2"/>
+          </svg>
+          <span class="ep-tag">牛棚日常</span>
+          <span class="ep-dur">11:15</span>
+        </div>
+        <div class="ep-body">
+          <h3>挤牛奶的耐心，是练出来的</h3>
+          <p>第一次挤牛奶手忙脚乱，第两百次已经能边聊天边完成。牛棚里的节奏，教会人慢下来。</p>
+          <div class="ep-meta"><span>第 127 集 · 谷雨</span><span class="play">▶ 观看</span></div>
+        </div>
+      </article>
+
+      <article class="ep-card reveal" data-cat="people">
+        <div class="ep-thumb">
+          <svg viewBox="0 0 400 250" role="img" aria-label="两个人物的故事">
+            <rect width="400" height="250" fill="#e6eef0"/>
+            <circle cx="200" cy="110" r="72" fill="#cfe1d8"/>
+            <circle cx="172" cy="100" r="26" fill="#f0c6a0"/>
+            <path d="M146 100 q0 -34 26 -34 q26 0 26 34 q-8 -14 -26 -14 q-18 0 -26 14z" fill="#3b2a1e"/>
+            <path d="M172 126 q-34 8 -40 54 l-4 40 h88 l-4 -40 q-6 -46 -40 -54z" fill="#d8784f"/>
+            <circle cx="246" cy="106" r="24" fill="#e6b78e"/>
+            <path d="M222 104 q0 -30 24 -30 q24 0 24 30 q-7 -12 -24 -12 q-17 0 -24 12z" fill="#2f2018"/>
+            <path d="M246 130 q-32 8 -38 50 l-4 40 h84 l-4 -40 q-6 -42 -38 -50z" fill="#5b7fa6"/>
+            <path d="M60 214 q140 -30 280 0" stroke="#a9c6ba" stroke-width="5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="ep-tag">人物故事</span>
+          <span class="ep-dur">14:06</span>
+        </div>
+        <div class="ep-body">
+          <h3>从城市回到田里，他们重新学会了搭档</h3>
+          <p>两个人在城市认识，在乡村落脚。拔箩卜、挤牛奶、修篱笆，协作从分工变成了本能。</p>
+          <div class="ep-meta"><span>第 126 集 · 清明</span><span class="play">▶ 观看</span></div>
+        </div>
+      </article>
+
+      <article class="ep-card reveal" data-cat="season">
+        <div class="ep-thumb">
+          <svg viewBox="0 0 400 250" role="img" aria-label="四季风物">
+            <rect width="400" height="250" fill="#dfeae1"/>
+            <path d="M0 160 Q100 130 200 156 T400 144 V250 H0 Z" fill="#8fc47f"/>
+            <path d="M0 200 Q120 172 240 196 T400 186 V250 H0 Z" fill="#5b9a52"/>
+            <circle cx="90" cy="60" r="28" fill="#f5d98a"/>
+            <path d="M300 60 q0 -26 20 -26 q20 0 20 26 z" fill="#fff" opacity=".8"/>
+            <g stroke="#3f7a3a" stroke-width="3" opacity=".6">
+              <path d="M60 250 Q100 180 84 140"/><path d="M180 250 Q212 190 196 150"/><path d="M300 250 Q332 196 316 156"/>
+            </g>
+            <g transform="translate(230,180)">
+              <path d="M10 0 l-10 -18 M14 0 l0 -22 M18 0 l10 -18" stroke="#3f8a3f" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M6 3 Q14 22 14 32 Q21 18 23 3 Z" fill="#ef9a4a"/>
+            </g>
+          </svg>
+          <span class="ep-tag">四季风物</span>
+          <span class="ep-dur">06:58</span>
+        </div>
+        <div class="ep-body">
+          <h3>一垄田的四季：从播种到收回</h3>
+          <p>用一台固定机位，拍摄同一块箩卜田从春到冬的变化，男女主人只在镜头里出现过四次。</p>
+          <div class="ep-meta"><span>第 125 集 · 立夏</span><span class="play">▶ 观看</span></div>
+        </div>
+      </article>
+
+      <article class="ep-card reveal" data-cat="field">
+        <div class="ep-thumb">
+          <svg viewBox="0 0 400 250" role="img" aria-label="雨后田地">
+            <rect width="400" height="250" fill="#c9dde4"/>
+            <path d="M0 150 Q100 116 200 142 T400 130 V250 H0 Z" fill="#7cb96e"/>
+            <path d="M0 196 Q120 166 240 192 T400 182 V250 H0 Z" fill="#4e8a47"/>
+            <g stroke="#a9c9d9" stroke-width="3" opacity=".8">
+              <path d="M40 40 l-10 20 M120 24 l-10 20 M300 36 l-10 20 M350 70 l-10 20"/>
+            </g>
+            <g>
+              <circle cx="170" cy="124" r="14" fill="#f0c6a0"/>
+              <path d="M170 138 q-18 5 -21 28 l-2 26 h44 l-2 -26 q-3 -23 -19 -28z" fill="#d8a24d"/>
+              <circle cx="222" cy="132" r="13" fill="#e6b78e"/>
+              <path d="M222 145 q-17 4 -19 26 l-2 24 h40 l-2 -24 q-2 -22 -17 -26z" fill="#4f9a5f"/>
+            </g>
+            <ellipse cx="300" cy="220" rx="34" ry="10" fill="#6ba25f" opacity=".6"/>
+          </svg>
+          <span class="ep-tag">田间劳作</span>
+          <span class="ep-dur">09:33</span>
+        </div>
+        <div class="ep-body">
+          <h3>雨后的泥土最诚实</h3>
+          <p>一场雨改变了整个田垄的节奏，两个人赤脚踩在泥里，拔箩卜反而比晴天更轻松。</p>
+          <div class="ep-meta"><span>第 124 集 · 小满</span><span class="play">▶ 观看</span></div>
+        </div>
+      </article>
+
+      <article class="ep-card reveal" data-cat="dairy">
+        <div class="ep-thumb">
+          <svg viewBox="0 0 400 250" role="img" aria-label="黄昏牛棚">
+            <rect width="400" height="250" fill="#f0dcb8"/>
+            <circle cx="320" cy="70" r="36" fill="#f3b96a"/>
+            <rect y="180" width="400" height="70" fill="#c9b48d"/>
+            <path d="M0 60 H400 V180 H0 Z" fill="#e8ddc6" opacity=".9"/>
+            <g transform="translate(90,100)">
+              <ellipse cx="90" cy="60" rx="60" ry="36" fill="#f7f3ec" stroke="#c9baa6" stroke-width="3"/>
+              <ellipse cx="52" cy="46" rx="15" ry="10" fill="#c9baa6" opacity=".8"/>
+              <circle cx="16" cy="30" r="21" fill="#f9f5ee" stroke="#c9baa6" stroke-width="3"/>
+              <ellipse cx="8" cy="36" rx="5" ry="4" fill="#3b2f26"/>
+              <ellipse cx="24" cy="36" rx="5" ry="4" fill="#3b2f26"/>
+              <path d="M52 94 l0 18 M82 94 l0 18 M110 92 l0 18" stroke="#c9baa6" stroke-width="7" stroke-linecap="round"/>
+            </g>
+            <rect x="296" y="176" width="32" height="36" rx="6" fill="#ccd7df" stroke="#9aa9b4" stroke-width="2"/>
+          </svg>
+          <span class="ep-tag">牛棚日常</span>
+          <span class="ep-dur">07:21</span>
+        </div>
+        <div class="ep-body">
+          <h3>黄昏的四十分钟</h3>
+          <p>太阳落山前的四十分钟，是牛棚最安静的时刻。挤牛奶、添草料，两个人几乎不说话。</p>
+          <div class="ep-meta"><span>第 123 集 · 芒种</span><span class="play">▶ 观看</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">拍摄手记</span>
+      <h2>一集影像，从一块田开始</h2>
+      <p>我们不写剧本，但有一套完整的记录方法。从选题到剪辑，每一步都围绕真实的劳动展开。</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h4>蹲点观察</h4>
+        <p>团队先到田里待上几天，找到男女搭档之间自然的协作方式，再决定机位与时间。</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h4>同步记录</h4>
+        <p>两台机位同时记录拔箩卜与挤牛奶的手部动作和表情，保留环境声与对话的原始状态。</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h4>季节回访</h4>
+        <p>同一块田、同一组人，按节气回访，让影像形成可比较、可延续的时间档案。</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">04</div>
+        <h4>社区共剪</h4>
+        <p>粗剪版本先在社区内部放映，根据成员反馈调整叙事顺序，再发布正式版本。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="section" id="community">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">社区声音</span>
+      <h2>他们也在田里，也在镜头外</h2>
+      <p>社区成员来自不同的地方，有人是农场主，有人是周末返乡的年轻人，也有人只是喜欢看泥土翻起的样子。</p>
+    </div>
+    <div class="community-grid">
+      <div class="voice-list">
+        <div class="voice reveal">
+          <div class="avatar av1">林</div>
+          <div class="v-body">
+            <h4>林晓禾</h4>
+            <div class="role">返乡青年 · 社区成员</div>
+            <p>“看你们拍男女一起拔箩卜那集，我第二天就拉着我对象回老家下地了。原来劳动也可以这么亲密。”</p>
+          </div>
+        </div>
+        <div class="voice reveal">
+          <div class="avatar av2">周</div>
+          <div class="v-body">
+            <h4>周牧山</h4>
+            <div class="role">家庭农场主 · 合作方</div>
+            <p>“挤牛奶的镜头拍得很稳，没有夸张也没有滤镜。我们农场的人看完都说，这就是我们每天的样子。”</p>
+          </div>
+        </div>
+        <div class="voice reveal">
+          <div class="avatar av3">苏</div>
+          <div class="v-body">
+            <h4>苏念</h4>
+            <div class="role">纪录片爱好者</div>
+            <p>“很少见到把拔箩卜和挤牛奶拍得这么不煽情的作品，节奏慢，但每一帧都有信息。”</p>
+          </div>
+        </div>
+        <div class="voice reveal">
+          <div class="avatar av4">陈</div>
+          <div class="v-body">
+            <h4>陈实</h4>
+            <div class="role">乡村教师 · 志愿者</div>
+            <p>“我把这些影像带进课堂，孩子们第一次知道牛奶是怎么来的，也知道了协作是什么样子。”</p>
+          </div>
+        </div>
+      </div>
+      <div class="community-side reveal">
+        <h3>社区正在发生</h3>
+        <p>每周三晚上，我们在线上开放一次“田间放映厅”，一起看新片、聊拍摄，也聊土地和生活。</p>
+        <div class="community-nums">
+          <div><b>36,000+</b><span>注册成员</span></div>
+          <div><b>128</b><span>线上放映场次</span></div>
+          <div><b>42</b><span>合作农场</span></div>
+          <div><b>9年</b><span>持续记录</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery" style="background:#f2ecdd;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">田园图集</span>
+      <h2>泥土、晨露与人的手</h2>
+      <p>从影像档案中挑出的定格画面，记录拔箩卜、挤牛奶以及田埂上那些容易被忽略的细节。</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item tall reveal">
+        <svg viewBox="0 0 300 380" role="img" aria-label="田垄上的箩卜">
+          <rect width="300" height="380" fill="#dfe9d8"/>
+          <path d="M0 220 Q80 190 160 214 T300 200 V380 H0 Z" fill="#7cb96e"/>
+          <path d="M0 280 Q90 250 180 274 T300 262 V380 H0 Z" fill="#4e8a47"/>
+          <g transform="translate(90,150)">
+            <path d="M40 0 l-24 -50 M46 0 l0 -58 M52 0 l24 -50" stroke="#3f8a3f" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <path d="M28 8 Q44 60 44 84 Q60 52 64 8 Z" fill="#ef9a4a" stroke="#d47f34" stroke-width="3"/>
+          </g>
+          <g transform="translate(180,240)">
+            <path d="M20 0 l-14 -30 M24 0 l0 -34 M28 0 l14 -30" stroke="#3f8a3f" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M14 4 Q24 36 24 50 Q34 30 36 4 Z" fill="#f0a95a" stroke="#d47f34" stroke-width="2"/>
+          </g>
+          <circle cx="240" cy="80" r="28" fill="#f5d98a" opacity=".85"/>
+        </svg>
+        <span class="g-cap">清晨的田垄</span>
+      </div>
+      <div class="g-item wide reveal">
+        <svg viewBox="0 0 460 220" role="img" aria-label="挤牛奶的双手">
+          <rect width="460" height="220" fill="#efe6d5"/>
+          <rect y="150" width="460" height="70" fill="#c9b48d"/>
+          <g transform="translate(120,40)">
+            <ellipse cx="100" cy="66" rx="70" ry="40" fill="#f7f3ec" stroke="#c9baa6" stroke-width="3"/>
+            <ellipse cx="58" cy="52" rx="18" ry="11" fill="#c9baa6" opacity=".8"/>
+            <circle cx="18" cy="34" r="24" fill="#f9f5ee" stroke="#c9baa6" stroke-width="3"/>
+            <ellipse cx="8" cy="42" rx="6" ry="4" fill="#3b2f26"/>
+            <ellipse cx="28" cy="42" rx="6" ry="4" fill="#3b2f26"/>
+          </g>
+          <rect x="330" y="128" width="44" height="46" rx="6" fill="#ccd7df" stroke="#9aa9b4" stroke-width="2"/>
+          <ellipse cx="352" cy="150" rx="14" ry="5" fill="#fff"/>
+        </svg>
+        <span class="g-cap">牛棚里的手与桶</span>
+      </div>
+      <div class="g-item reveal">
+        <svg viewBox="0 0 220 200" role="img" aria-label="草垛">
+          <rect width="220" height="200" fill="#e3eedb"/>
+          <ellipse cx="110" cy="140" rx="66" ry="30" fill="#d9b35e"/>
+          <path d="M44 140 q66 -56 132 0" fill="#e3c073" stroke="#c39b46" stroke-width="3"/>
+          <path d="M110 84 v56" stroke="#c39b46" stroke-width="3"/>
+          <circle cx="176" cy="46" r="22" fill="#f5d98a"/>
+        </svg>
+        <span class="g-cap">秋后的草垛</span>
+      </div>
+      <div class="g-item reveal">
+        <svg viewBox="0 0 220 200" role="img" aria-label="两个人">
+          <rect width="220" height="200" fill="#e6eef0"/>
+          <circle cx="82" cy="80" r="20" fill="#f0c6a0"/>
+          <path d="M82 100 q-28 8 -32 44 l-2 30 h68 l-2 -30 q-4 -36 -32 -44z" fill="#d8784f"/>
+          <circle cx="140" cy="86" r="19" fill="#e6b78e"/>
+          <path d="M140 105 q-26 7 -30 40 l-2 29 h64 l-2 -29 q-4 -33 -30 -40z" fill="#5b7fa6"/>
+        </svg>
+        <span class="g-cap">并肩的人</span>
+      </div>
+      <div class="g-item wide reveal">
+        <svg viewBox="0 0 460 220" role="img" aria-label="油菜花与田地">
+          <rect width="460" height="220" fill="#dfeae1"/>
+          <path d="M0 130 Q120 100 240 124 T460 112 V220 H0 Z" fill="#8fc47f"/>
+          <path d="M0 168 Q140 140 280 164 T460 152 V220 H0 Z" fill="#5b9a52"/>
+          <circle cx="90" cy="50" r="26" fill="#f5d98a"/>
+          <g fill="#f2d66b">
+            <circle cx="170" cy="150" r="5"/><circle cx="186" cy="158" r="5"/><circle cx="202" cy="148" r="5"/>
+            <circle cx="300" cy="162" r="5"/><circle cx="316" cy="170" r="5"/><circle cx="332" cy="160" r="5"/>
+          </g>
+          <path d="M0 190 Q150 168 300 188 T460 180" stroke="#3f7a3a" stroke-width="3" fill="none" opacity=".5"/>
+        </svg>
+        <span class="g-cap">春日的田埂</span>
+      </div>
+      <div class="g-item reveal">
+        <svg viewBox="0 0 220 200" role="img" aria-label="牛奶桶">
+          <rect width="220" height="200" fill="#e9f0e2"/>
+          <rect x="70" y="70" width="80" height="86" rx="8" fill="#ccd7df" stroke="#9aa9b4" stroke-width="3"/>
+          <rect x="76" y="56" width="68" height="18" rx="6" fill="#e6edf2" stroke="#9aa9b4" stroke-width="3"/>
+          <ellipse cx="110" cy="118" rx="22" ry="7" fill="#fff"/>
+          <path d="M110 54 q0 -18 18 -24" stroke="#9aa9b4" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="g-cap">刚挤好的牛奶</span>
+      </div>
+      <div class="g-item reveal">
+        <svg viewBox="0 0 220 200" role="img" aria-label="田间小路">
+          <rect width="220" height="200" fill="#d7e9ef"/>
+          <path d="M0 120 Q70 96 140 118 T220 108 V200 H0 Z" fill="#8fc47f"/>
+          <path d="M70 200 Q100 150 110 108" stroke="#d9c08a" stroke-width="18" fill="none" stroke-linecap="round"/>
+          <circle cx="176" cy="46" r="20" fill="#f5d98a"/>
+        </svg>
+        <span class="g-cap">回农舍的小路</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section class="section" id="join">
+  <div class="wrap">
+    <div class="join reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--wheat)">加入我们</span>
+        <h2>成为田野同行的一员</h2>
+        <p>订阅每周影像简报，获取最新一集、拍摄手记和社区放映邀请。也可以把自己的田间故事投给我们。</p>
+        <form class="join-form" id="joinForm">
+          <input type="email" id="emailInput" placeholder="输入你的邮箱地址" required>
+          <button type="submit">立即订阅</button>
+        </form>
+        <div class="form-msg" id="formMsg"></div>
+      </div>
+      <div class="join-side">
+        <div class="join-chip"><span>本周新片</span><b>2 集</b></div>
+        <div class="join-chip"><span>社区放映</span><b>周三 20:00</b></div>
+        <div class="join-chip"><span>投稿通道</span><b>长期开放</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin:0 auto 40px;text-align:center;max-width:600px;">
+      <span class="eyebrow" style="justify-content:center;">常见问题</span>
+      <h2>关于影像与社区</h2>
+    </div>
+    <div class="faq reveal" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q">你们的影像会摆拍吗？<span class="plus">+</span></button>
+        <div class="faq-a"><p>不会。我们坚持不写台词、不引导动作。男女一起拔箩卜、挤牛奶等场景都来自真实劳动，团队只负责选择机位和等待时机，尽量不打扰。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">更新频率是怎样的？<span class="plus">+</span></button>
+        <div class="faq-a"><p>常规情况下每周更新一集正片，节气或农忙时会增加到两到三集。社区放映厅固定在每周三晚开放，提供完整回放。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">我可以投稿自己的田间故事吗？<span class="plus">+</span></button>
+        <div class="faq-a"><p>当然可以。投稿通道长期开放，支持视频、照片和文字。我们会与投稿者沟通授权和剪辑方向，成片会在社区首发并署名。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">合作农场需要满足什么条件？<span class="plus">+</span></button>
+        <div class="faq-a"><p>我们希望合作方有稳定的田间或牧业劳动，愿意长期记录，并尊重真实呈现。男女搭档协作的日常是加分项，但不是硬性要求。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">社区成员可以获得什么？<span class="plus">+</span></button>
+        <div class="faq-a"><p>成员可以提前观看新片、参与粗剪讨论、报名线下田间活动，并优先获得合作农场的体验名额与影像资料包。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand">
+          <span class="brand-mark">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21c-4 0-7-3-7-7 0-3 2-5 4-6l3-4 3 4c2 1 4 3 4 6 0 4-3 7-7 7z"/>
+              <path d="M12 21v-7"/>
+            </svg>
+          </span>
+          <span>田野同行</span>
+        </a>
+        <p>一部持续更新的田园影像档案，记录男女一起拔箩卜、挤牛奶的真实劳动与土地温度。</p>
+        <div class="foot-social">
+          <a href="#top" aria-label="视频平台">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </a>
+          <a href="#top" aria-label="社区">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+          </a>
+          <a href="#top" aria-label="邮件">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>影像</h4>
+        <ul>
+          <li><a href="#episodes">最新一集</a></li>
+          <li><a href="#episodes">田间劳作</a></li>
+          <li><a href="#episodes">牛棚日常</a></li>
+          <li><a href="#episodes">四季风物</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>社区</h4>
+        <ul>
+          <li><a href="#community">社区声音</a></li>
+          <li><a href="#join">加入我们</a></li>
+          <li><a href="#process">拍摄手记</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>联系</h4>
+        <ul>
+          <li>合作咨询：hello@tianye.example</li>
+          <li>投稿通道：长期开放</li>
+          <li>办公地址：乡村影像工作坊</li>
+          <li>工作时间：周一至周五</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 田野同行影像工作室 · 保留所有权利</span>
+      <span>真实记录 · 长期陪伴 · 社区共创</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 移动端菜单
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('show');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => mobileMenu.classList.remove('show'));
+  });
+
+  // 滚动显现
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // 专栏筛选
+  const filterRow = document.getElementById('filterRow');
+  const epCards = Array.from(document.querySelectorAll('#epGrid .ep-card'));
+  filterRow.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    filterRow.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    epCards.forEach(card => {
+      const show = filter === 'all' || card.dataset.cat === filter;
+      card.style.display = show ? 'flex' : 'none';
+    });
+  });
+
+  // FAQ 手风琴
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const answer = q.nextElementSibling;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        const a = i.querySelector('.faq-a');
+        if (a) a.style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // 订阅表单
+  const form = document.getElementById('joinForm');
+  const formMsg = document.getElementById('formMsg');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value.trim();
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!valid) {
+      formMsg.textContent = '请输入有效的邮箱地址，我们会把最新影像发给你。';
+      return;
+    }
+    formMsg.textContent = '订阅成功，感谢你与田野同行。';
+    form.reset();
+  });
+
+  // 顶栏滚动变化
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      nav.style.background = 'rgba(247,242,231,.95)';
+      nav.style.boxShadow = '0 10px 30px -24px rgba(42,32,24,.6)';
+    } else {
+      nav.style.background = 'rgba(247,242,231,.82)';
+      nav.style.boxShadow = 'none';
+    }
+  });
+</script>
+</body>
+            </html>
